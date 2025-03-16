@@ -15,7 +15,7 @@ export default function Index() {
     error: moviesError 
   } = useFetch(() => fetchMovies({ query: "" }));
 
-  console.log(movies);
+  // console.log(movies);
 
   return (
     <View className="flex-1 bg-primary">
@@ -49,6 +49,14 @@ export default function Index() {
                 )}
                 keyExtractor={item => item.id.toString()}
                 numColumns={3}
+                columnWrapperStyle={{ 
+                  justifyContent: "flex-start",
+                  gap: 20,
+                  paddingRight: 5,
+                  marginBottom: 10 
+                }}
+                className="mt-2 pb-32"
+                scrollEnabled={false}
               />
             </>
           </View>
