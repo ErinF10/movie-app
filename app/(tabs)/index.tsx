@@ -32,7 +32,7 @@ export default function Index() {
             className="mt-10 self-center"
           />
         ) : moviesError ? (
-          <Text>Error: {moviesError?.message}</Text>
+          <Text className="text-white">Error: {moviesError?.message}</Text>
         ) : (
           <View className="flex-1 mt-5">
             <SearchBar 
